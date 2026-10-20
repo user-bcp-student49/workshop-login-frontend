@@ -401,3 +401,8 @@ proteccion de ramas. No se publicaron commits/PR. El lockfile y archivos
 nuevos deben incluirse al publicar para que checkout contenga lo probado.
 Local: Node 26.9.0/npm 11.19.1; no se atribuyen los resultados a Node 22
 del workflow. Detalle de comandos y fallos en docs/TESTING.md.
+
+## Análisis discovery — 2026-10-20
+
+Proyecto: `workshop-login-frontend`. Alcance: login, sesión en cliente y solicitud de tareas protegida por Bearer.
+No se identificaron candidatos adicionales en este alcance. El flujo revisado delega el login en `AuthService`, mantiene la sesión en memoria según el contrato descrito en el README, y consulta tareas a través de `TasksService`; las pruebas de servicio cubren la solicitud y los errores HTTP. Los cinco candidatos de este análisis corresponden a los dos servicios backend.
